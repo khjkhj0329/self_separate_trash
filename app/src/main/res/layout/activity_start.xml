@@ -25,59 +25,43 @@
             android:background="@color/backColor"
             android:src="@drawable/searh_btn"/>
     </LinearLayout>
-
     <ImageButton
-        android:layout_width="160dp"
-        android:layout_height="180dp"
-        android:src="@drawable/trash_btn"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_raduis"/>
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nanummyeongjoregular"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:layout_marginLeft="36dp"
-        android:text="일반 쓰레기"/>
+        android:layout_marginTop="80dp"
+        android:background="@color/backColor"
+        android:src="@drawable/trash_btn"/>
     <ImageButton
-        android:layout_width="160dp"
-        android:layout_height="180dp"
-        android:src="@drawable/trash_btn"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_raduis"/>
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nanummyeongjoregular"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:layout_marginLeft="36dp"
-        android:text="일반 쓰레기"/>
+        android:layout_marginTop="60dp"
+        android:background="@color/backColor"
+        android:src="@drawable/recycling_btn"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="181dp"
+        android:layout_marginTop="63dp"
         android:background="@color/btnColor">
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/menu_btn"
-            android:layout_marginLeft="51dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="2dp"
             android:background="@color/btnColor"/>
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:src="@drawable/home_btn"
+            android:layout_marginTop="4dp"
             android:background="@color/btnColor"
             android:layout_marginLeft="65dp"/>
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:src="@drawable/back_btn"
+            android:layout_marginTop="2dp"
             android:background="@color/btnColor"
             android:layout_marginLeft="74dp"/>
     </LinearLayout>

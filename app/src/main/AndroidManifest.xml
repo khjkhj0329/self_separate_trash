@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".StartActivity"/>
         <activity android:name=".RecyclingActivity"/>
+        <activity android:name=".EtcMenuActivity"/>
     </application>
         
 

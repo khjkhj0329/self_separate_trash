@@ -17,11 +17,13 @@
         android:gravity="center"
         android:layout_marginTop="130dp">
         <ImageButton
+            android:id="@+id/dress_btn"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:src="@drawable/dress_btn"
             android:background="@color/backColor"/>
         <ImageButton
+            android:id="@+id/food_btn"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:src="@drawable/food_btn"
@@ -35,11 +37,13 @@
         android:gravity="center"
         android:layout_marginTop="80dp">
         <ImageButton
+            android:id="@+id/planstic_btn"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:src="@drawable/plastic_btn"
             android:background="@color/backColor"/>
         <ImageButton
+            android:id="@+id/styrofoam_btn"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:src="@drawable/styrofoam_btn"
@@ -50,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="93dp"
+        android:layout_marginTop="80dp"
         android:background="@color/btnColor">
         <ImageButton
             android:layout_width="60dp"
@@ -76,5 +80,4 @@
             android:background="@color/btnColor"
             android:layout_marginLeft="74dp"/>
     </LinearLayout>
-
 </LinearLayout>

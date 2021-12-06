@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class StartActivity extends AppCompatActivity {
-    ImageButton recyclingBtn;
+    ImageButton recyclingBtn, menuBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,11 +17,20 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         recyclingBtn = findViewById(R.id.recycling_btn);
+        menuBtn = findViewById(R.id.menu_btn);
+        menuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), EtcMenuActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         recyclingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RecyclingActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(getApplicationContext(), RecyclingActivity.class);
+                startActivity(intent2);
                 finish();
             }
         });

@@ -3,17 +3,16 @@ package kr.hs.emirim.w2029.self_separate_trash;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class GlassActivity extends AppCompatActivity {
+public class TrashActivity extends AppCompatActivity {
     ImageButton menuBtn, homeBtn, backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_glass);
+        setContentView(R.layout.activity_trash);
 
         menuBtn = findViewById(R.id.menu_btn);
         homeBtn = findViewById(R.id.home_btn);
@@ -38,7 +37,7 @@ public class GlassActivity extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RecyclingActivity.class);
+                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
                 startActivity(intent);
                 finish();
             }

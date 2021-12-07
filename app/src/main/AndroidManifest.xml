@@ -27,6 +27,7 @@
         <activity android:name=".FoodActivity"/>
         <activity android:name=".GlassActivity"/>
         <activity android:name=".DressActivity"/>
+        <activity android:name=".TrashActivity"/>
     </application>
         
 

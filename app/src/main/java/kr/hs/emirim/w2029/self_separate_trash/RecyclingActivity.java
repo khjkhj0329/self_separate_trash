@@ -23,7 +23,7 @@ public class RecyclingActivity extends AppCompatActivity {
         canBtn = findViewById(R.id.can_btn);
         glassBtn = findViewById(R.id.glass_btn);
         paperBtn = findViewById(R.id.paper_btn);
-        planstic_Btn = findViewById(R.id.planstic_btn);
+        planstic_Btn = findViewById(R.id.planstic2_btn);
 
         canBtn.setOnClickListener(new View.OnClickListener() {
             @Override

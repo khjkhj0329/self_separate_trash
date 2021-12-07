@@ -21,40 +21,40 @@ public class EtcMenuActivity extends AppCompatActivity {
         homeBtn = findViewById(R.id.home_btn);
         menuBtn = findViewById(R.id.menu_btn);
 
-        foodBtn = findViewById(R.id.planstic_btn);
-        plansticBtn = findViewById(R.id.dress_btn);
-        dressBtn = findViewById(R.id.styrofoam_btn);
-        styrofoamBtn = findViewById(R.id.food_btn);
+        foodBtn = findViewById(R.id.food_btn);
+        plansticBtn = findViewById(R.id.planstic_btn);
+        dressBtn = findViewById(R.id.dress_btn);
+        styrofoamBtn = findViewById(R.id.styrofoam_btn);
 
         foodBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent3 = new Intent(getApplicationContext(), FoodActivity.class);
-                startActivity(intent3);
+                Intent intent = new Intent(getApplicationContext(), FoodActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
         plansticBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent3 = new Intent(getApplicationContext(), PlansticActivity.class);
-                startActivity(intent3);
+                Intent intent = new Intent(getApplicationContext(), PlansticActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
         dressBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent3 = new Intent(getApplicationContext(), DressActivity.class);
-                startActivity(intent3);
+                Intent intent = new Intent(getApplicationContext(), DressActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
         styrofoamBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent3 = new Intent(getApplicationContext(), StyrofoamActivity.class);
-                startActivity(intent3);
+                Intent intent = new Intent(getApplicationContext(), StyrofoamActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
@@ -69,8 +69,8 @@ public class EtcMenuActivity extends AppCompatActivity {
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(), StartActivity.class);
-                startActivity(intent2);
+                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

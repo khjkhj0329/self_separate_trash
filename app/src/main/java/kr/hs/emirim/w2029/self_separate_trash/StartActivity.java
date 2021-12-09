@@ -21,7 +21,7 @@ public class StartActivity extends AppCompatActivity {
 
         recyclingBtn = findViewById(R.id.recycling_btn);
         menuBtn = findViewById(R.id.menu_btn);
-        searchBtn = findViewById(R.id.search_btn);
+//        searchBtn = findViewById(R.id.search_btn);
         trashBtn = findViewById(R.id.trash_btn);
         mypageBtn = findViewById(R.id.mypage_btn);
 
@@ -33,14 +33,14 @@ public class StartActivity extends AppCompatActivity {
                 finish();
             }
         });
-        searchBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        searchBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
         menuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

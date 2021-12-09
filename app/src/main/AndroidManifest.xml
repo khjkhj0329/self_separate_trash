@@ -29,6 +29,8 @@
         <activity android:name=".DressActivity"/>
         <activity android:name=".TrashActivity"/>
         <activity android:name=".InsertActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".JoinActivity"/>
     </application>
         
 

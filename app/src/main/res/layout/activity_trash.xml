@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="33dp"
         android:src="@drawable/title_all"/>
     <TextView
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="265dp"
+        android:layout_marginTop="250dp"
         android:background="@color/btnColor">
         <ImageButton
             android:id="@+id/menu_btn"

@@ -31,33 +31,26 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:hint="id"
-        android:paddingLeft="10dp"
-        android:background="@drawable/search_raduis"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="소문자 + 특수기호(!,~,@)"
         android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="170dp"
-        android:textSize="15sp"/>
+        android:paddingLeft="10dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/nanummyeongjoregular"
+        android:background="@drawable/search_raduis"/>
     <EditText
         android:id="@+id/input_pwd"
         android:layout_width="270dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:paddingLeft="10dp"
-        android:hint="password"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/search_raduis"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="10자 이상 입력"
+        android:textSize="22sp"
         android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="233dp"
-        android:textSize="15sp"/>
+        android:textStyle="bold"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/nanummyeongjoregular"
+        android:background="@drawable/search_raduis"/>
     <Button
         android:id="@+id/join_btn"
         android:layout_width="270dp"
@@ -67,7 +60,7 @@
         android:textStyle="bold"
         android:layout_marginTop="50dp"
         android:layout_gravity="center"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:text="Join"/>
 
 </LinearLayout>

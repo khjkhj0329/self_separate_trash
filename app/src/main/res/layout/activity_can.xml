@@ -9,11 +9,11 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="33dp"
         android:src="@drawable/title_all"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:text="@string/can_info"
         android:textColor="@color/white"
         android:layout_marginTop="160dp"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="98dp"
         android:background="@color/btnColor">
         <ImageButton
             android:id="@+id/menu_btn"

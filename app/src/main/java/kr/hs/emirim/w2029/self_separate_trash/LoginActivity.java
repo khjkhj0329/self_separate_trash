@@ -5,8 +5,10 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
 
     TextView joinBtn;
     Button loginBtn;
+
+    CheckBox checkBox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,13 +40,15 @@ public class LoginActivity extends AppCompatActivity {
         pwdLogin = findViewById(R.id.login_pwd);
         loginBtn = findViewById(R.id.login_btn);
         joinBtn = findViewById(R.id.join_btn);
+        checkBox = findViewById(R.id.check_box);
 
         setting = getSharedPreferences("setting", 0);
         editor=setting.edit();
 
-        if (setting.getBoolean("chk_auto", false)){
+        if(setting.getString("chk_auto", "false").equals("true")){
             idLogin.setText(setting.getString("ID",""));
-            pwdLogin.setText(setting.getString("PWD",""));
+            pwdLogin.setText(setting.getString("PW",""));
+            checkBox.setChecked(true);
         }
 
         helper = new DatabaseOpenHelper(LoginActivity.this, DatabaseOpenHelper.tableName, null, version);
@@ -51,6 +57,18 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(checkBox.isChecked()){
+                    String ID = idLogin.getText().toString();
+                    String PW = pwdLogin.getText().toString();
+
+                    editor.putString("ID", ID);
+                    editor.putString("PW", PW);
+                    editor.putString("chk_auto", String.valueOf(true));
+                    editor.commit();
+                }else{
+                    editor.clear();
+                    editor.commit();
+                }
                 String id = idLogin.getText().toString();
                 String pwd = pwdLogin.getText().toString();
 
@@ -61,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 sql = "SELECT id FROM joinTB WHERE id = '" + id + "'";
+                Log.i("123",id);
                 cursor = database.rawQuery(sql, null);
 
                 if (cursor.getCount() != 1){
@@ -68,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "아이디가 일치하지 않습니다 😒😒", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                sql = "SELECT pwssword FROM joinTB WHERE pwssword = '" + pwd + "'";
+                sql = "SELECT password FROM joinTB WHERE password = '" + pwd + "'";
                 cursor = database.rawQuery(sql, null);
 
                 cursor.moveToNext();

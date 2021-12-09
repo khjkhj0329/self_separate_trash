@@ -19,6 +19,7 @@ public class JoinActivity extends AppCompatActivity {
     SQLiteDatabase db;
     EditText joinId, joinPwd;
     Button joinBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +29,9 @@ public class JoinActivity extends AppCompatActivity {
         joinId = findViewById(R.id.input_id);
         joinPwd = findViewById(R.id.input_pwd);
         joinBtn = findViewById(R.id.join_btn);
-        
+
         dbHelper = new JoinActivity.MyDBHelper(this);
-        
+
         joinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,15 +48,14 @@ public class JoinActivity extends AppCompatActivity {
             }
         });
     }
-
     private void selectDB() {
         db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from joinTB;", null);
-        String Id = "아이디\r\n_____________\r\n";
-        String Pwd = "비밀번호\r\n_____________\r\n";
+        String id = "아이디\r\n_____________\r\n";
+        String pwd = "비밀번호\r\n_____________\r\n";
         while (cursor.moveToNext()){
-            Id+=cursor.getInt(1) + "\r\n";
-            Pwd+=cursor.getInt(2) + "\r\n";
+            id+=cursor.getInt(0) + "\r\n";
+            pwd+=cursor.getInt(1) + "\r\n";
         }
         cursor.close();
         db.close();

@@ -27,7 +27,6 @@
         <activity android:name=".GlassActivity"/>
         <activity android:name=".DressActivity"/>
         <activity android:name=".TrashActivity"/>
-        <activity android:name=".MypageActivity"/>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".JoinActivity"/>
     </application>

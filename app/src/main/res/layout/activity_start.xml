@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_marginTop="70dp"
         android:src="@drawable/title_start"/>
 <!--    <LinearLayout-->
@@ -46,18 +46,21 @@
             android:background="@color/backColor"
             android:src="@drawable/recycling_btn"/>
     </LinearLayout>
-    <ImageButton
-        android:id="@+id/mypage_btn"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@color/backColor"
-        android:layout_marginTop="130dp"
-        android:layout_gravity="right"
-        android:src="@drawable/mypage_btn"/>
+    <TextView
+        android:id="@+id/log_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        android:layout_marginTop="90dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginLeft="310dp"
+        android:fontFamily="@font/nanummyeongjoregular"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="30dp"
         android:background="@color/btnColor">
         <ImageButton
             android:id="@+id/menu_btn"

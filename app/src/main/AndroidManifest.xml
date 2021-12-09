@@ -28,6 +28,7 @@
         <activity android:name=".GlassActivity"/>
         <activity android:name=".DressActivity"/>
         <activity android:name=".TrashActivity"/>
+        <activity android:name=".InsertActivity"/>
     </application>
         
 

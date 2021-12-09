@@ -11,7 +11,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class StartActivity extends AppCompatActivity {
-    ImageButton recyclingBtn, menuBtn;
+    ImageButton recyclingBtn, menuBtn, trashBtn, mypageBtn;
     TextView searchBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,17 @@ public class StartActivity extends AppCompatActivity {
         recyclingBtn = findViewById(R.id.recycling_btn);
         menuBtn = findViewById(R.id.menu_btn);
         searchBtn = findViewById(R.id.search_btn);
+        trashBtn = findViewById(R.id.trash_btn);
+        mypageBtn = findViewById(R.id.mypage_btn);
+
+        mypageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), InsertActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,8 +52,16 @@ public class StartActivity extends AppCompatActivity {
         recyclingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(), RecyclingActivity.class);
-                startActivity(intent2);
+                Intent intent = new Intent(getApplicationContext(), RecyclingActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        trashBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), TrashActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

@@ -2,14 +2,17 @@ package kr.hs.emirim.w2029.self_separate_trash;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PaperActivity extends AppCompatActivity {
     ImageButton menuBtn, homeBtn, backBtn;
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +21,8 @@ public class PaperActivity extends AppCompatActivity {
         menuBtn = findViewById(R.id.menu_btn);
         homeBtn = findViewById(R.id.home_btn);
         backBtn = findViewById(R.id.back_btn);
+        textView = findViewById(R.id.text_paper);
+        textView.setMovementMethod(new ScrollingMovementMethod());
 
         menuBtn.setOnClickListener(new View.OnClickListener() {
             @Override

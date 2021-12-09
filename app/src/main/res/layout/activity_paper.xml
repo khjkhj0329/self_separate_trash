@@ -9,23 +9,25 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="33dp"
         android:src="@drawable/title_all"/>
     <TextView
+        android:id="@+id/text_paper"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="560dp"
         android:text="@string/paper_info"
         android:textColor="@color/white"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="70dp"
         android:layout_marginLeft="10dp"
+        android:scrollbars="vertical"
         android:layout_marginRight="10dp"
         android:font="@font/nanummyeongjoregular"
         android:textSize="15sp"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:orientation="horizontal"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="28dp"
         android:background="@color/btnColor">
         <ImageButton
             android:id="@+id/menu_btn"

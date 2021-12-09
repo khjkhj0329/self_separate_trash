@@ -12,12 +12,14 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/title_all"/>
     <TextView
+        android:id="@+id/text_planstic2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="580dp"
         android:text="@string/plastic2_info"
         android:textColor="@color/white"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="10dp"
+        android:scrollbars="vertical"
         android:font="@font/nanummyeongjoregular"
         android:layout_marginRight="10dp"
         android:textSize="16sp"/>
@@ -25,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="33dp"
         android:background="@color/btnColor">
         <ImageButton
             android:id="@+id/menu_btn"

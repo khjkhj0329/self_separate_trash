@@ -18,7 +18,6 @@
         <activity android:name=".StartActivity"/>
         <activity android:name=".RecyclingActivity"/>
         <activity android:name=".EtcMenuActivity"/>
-        <activity android:name=".SearchActivity"/>
         <activity android:name=".CanActivity"/>
         <activity android:name=".StyrofoamActivity"/>
         <activity android:name=".PaperActivity"/>
@@ -28,7 +27,7 @@
         <activity android:name=".GlassActivity"/>
         <activity android:name=".DressActivity"/>
         <activity android:name=".TrashActivity"/>
-        <activity android:name=".InsertActivity"/>
+        <activity android:name=".MypageActivity"/>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".JoinActivity"/>
     </application>

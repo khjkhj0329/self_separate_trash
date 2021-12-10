@@ -70,10 +70,10 @@ public class LoginActivity extends AppCompatActivity {
                     editor.commit();
                 }
                 String id = idLogin.getText().toString();
-                String pwd = pwdLogin.getText().toString();
+                String pw = pwdLogin.getText().toString();
 
                 // 아이디오 비밀번호 edit가 공백이면 toast 호출
-                if (id.length() == 0 || pwd.length() == 0){
+                if (id.length() == 0 || pw.length() == 0){
                     Toast.makeText(LoginActivity.this, "아이디와 비밀번호를 입력해주세요 :)", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -83,16 +83,16 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (cursor.getCount() != 1){
                     //아이디 틀림
-                    Toast.makeText(LoginActivity.this, "아이디가 일치하지 않습니다 😒😒", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 \n일치하지 않습니다 😒😒", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                sql = "SELECT pwd FROM joinTB WHERE pwd = '" + pwd + "'";
+                sql = "SELECT pwd FROM joinTB WHERE pwd = '" + pw + "'";
                 cursor = database.rawQuery(sql, null);
 
                 cursor.moveToNext();
-                if (!pwd.equals((cursor.getString(0)))){
+                if (!pw.equals((cursor.getString(0)))){
                     //비밀번호 틀림
-                    Toast.makeText(LoginActivity.this, "비밀번호가 일치하지 않습니다 😒😒", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 \n일치하지 않습니다 😒😒", Toast.LENGTH_SHORT).show();
                 }else {
                     //로그인 성공
                     sql = "SELECT id FROM joinTB WHERE id = '" + id + "'";

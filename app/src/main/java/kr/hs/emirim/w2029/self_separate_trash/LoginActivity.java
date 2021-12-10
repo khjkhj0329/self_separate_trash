@@ -79,7 +79,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 sql = "SELECT id FROM joinTB WHERE id = '" + id + "'";
-                Log.i("123",id);
                 cursor = database.rawQuery(sql, null);
 
                 if (cursor.getCount() != 1){
@@ -87,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "아이디가 일치하지 않습니다 😒😒", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                sql = "SELECT password FROM joinTB WHERE password = '" + pwd + "'";
+                sql = "SELECT pwd FROM joinTB WHERE pwd = '" + pwd + "'";
                 cursor = database.rawQuery(sql, null);
 
                 cursor.moveToNext();
